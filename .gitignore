@@ -1,0 +1,14 @@
+### Jetbrains IDE's ###
+/.idea/*
+
+### VS Code ###
+/.vscode/*
+
+### MacOS ###
+.DS_Store
+
+### AI agents ###
+**/.claude/*
+
+### Secrets ###
+.env
