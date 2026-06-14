@@ -1,4 +1,4 @@
-module github.com/ii1818nn/pkg-inf-terraform-provider-abstract
+module github.com/ii1818nn/terraform-provider-abstract
 
 go 1.25.8
 

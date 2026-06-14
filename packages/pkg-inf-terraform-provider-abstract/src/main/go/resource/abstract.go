@@ -5,8 +5,8 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
-	"github.com/ii1818nn/pkg-inf-terraform-provider-abstract/src/main/go/helpers"
-	"github.com/ii1818nn/pkg-inf-terraform-provider-abstract/src/main/go/runner"
+	"github.com/ii1818nn/terraform-provider-abstract/src/main/go/helpers"
+	"github.com/ii1818nn/terraform-provider-abstract/src/main/go/runner"
 )
 
 func Abstract() *schema.Resource {

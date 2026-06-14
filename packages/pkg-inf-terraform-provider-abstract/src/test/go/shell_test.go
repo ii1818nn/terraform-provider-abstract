@@ -3,7 +3,7 @@ package runner_test
 import (
 	"testing"
 
-	"github.com/ii1818nn/pkg-inf-terraform-provider-abstract/src/main/go/runner"
+	"github.com/ii1818nn/terraform-provider-abstract/src/main/go/runner"
 )
 
 func TestRun_Output(t *testing.T) {
