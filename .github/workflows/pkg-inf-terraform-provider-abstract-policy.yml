@@ -1,0 +1,22 @@
+name: pkg-inf-terraform-provider-abstract-policy
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - packages/pkg-inf-terraform-provider-abstract/**
+
+jobs:
+  pkg-inf-terraform-provider-abstract-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache-dependency-path: packages/pkg-inf-terraform-provider-abstract/go.sum
+
+      - run: go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
+
+      - run: make pkg-inf-terraform-provider-abstract-check

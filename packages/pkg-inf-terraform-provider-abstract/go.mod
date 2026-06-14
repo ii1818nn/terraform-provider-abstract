@@ -1,6 +1,6 @@
-module github.com/ii1818nn/pkg-inf-terraform-provider-abstract
+module github.com/ii1818nn/terraform-provider-abstract
 
-go 1.26.1
+go 1.25.8
 
 require github.com/hashicorp/terraform-plugin-sdk/v2 v2.40.1
 

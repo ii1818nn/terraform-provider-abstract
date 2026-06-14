@@ -3,8 +3,8 @@ package provider
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
-	"github.com/ii1818nn/pkg-inf-terraform-provider-abstract/src/main/go/datasource"
-	"github.com/ii1818nn/pkg-inf-terraform-provider-abstract/src/main/go/resource"
+	"github.com/ii1818nn/terraform-provider-abstract/src/main/go/datasource"
+	"github.com/ii1818nn/terraform-provider-abstract/src/main/go/resource"
 )
 
 func Provider() *schema.Provider {

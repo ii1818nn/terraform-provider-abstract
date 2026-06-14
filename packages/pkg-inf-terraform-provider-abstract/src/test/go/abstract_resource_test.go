@@ -6,7 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
-	"github.com/ii1818nn/pkg-inf-terraform-provider-abstract/src/main/go/provider"
+	"github.com/ii1818nn/terraform-provider-abstract/src/main/go/provider"
 )
 
 var providerFactories = map[string]func() (*schema.Provider, error){
