@@ -3,7 +3,7 @@ name: pkg-inf-terraform-provider-abstract-release
 on:
   push:
     tags:
-      - v*
+      - pkg-inf-terraform-provider-abstract/v*
 
 jobs:
   pkg-inf-terraform-provider-abstract-release:

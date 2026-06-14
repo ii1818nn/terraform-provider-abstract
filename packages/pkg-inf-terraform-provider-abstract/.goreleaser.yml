@@ -1,5 +1,8 @@
 version: 2
 
+monorepo:
+  tag_prefix: "pkg-inf-terraform-provider-abstract/"
+
 before:
   hooks:
     - go mod tidy
@@ -22,7 +25,7 @@ builds:
     main: ./src/main/go/
 
 archives:
-  - format: zip
+  - formats: [zip]
     name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
 
 checksum:
@@ -33,6 +36,10 @@ signs:
   - artifacts: checksum
     args:
       - "--batch"
+      - "--pinentry-mode"
+      - "loopback"
+      - "--passphrase"
+      - "{{ .Env.GPG_PASSPHRASE }}"
       - "--local-user"
       - "{{ .Env.GPG_FINGERPRINT }}"
       - "--output"
