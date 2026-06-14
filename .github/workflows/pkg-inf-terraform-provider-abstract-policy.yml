@@ -19,7 +19,7 @@ jobs:
 
       - uses: golangci/golangci-lint-action@v6
         with:
-          version: latest
+          version: v2.1.6
           working-directory: packages/pkg-inf-terraform-provider-abstract
 
       - run: make pkg-inf-terraform-provider-abstract-build
