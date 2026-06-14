@@ -7,7 +7,7 @@ on:
       - packages/pkg-inf-terraform-provider-abstract/**
 
 jobs:
-  check:
+  pkg-inf-terraform-provider-abstract-policy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,10 +19,9 @@ jobs:
 
       - uses: golangci/golangci-lint-action@v6
         with:
+          version: latest
           working-directory: packages/pkg-inf-terraform-provider-abstract
 
-      - name: buildf
-        run: make pkg-inf-terraform-provider-abstract-build
+      - run: make pkg-inf-terraform-provider-abstract-build
 
-      - name: test
-        run: make pkg-inf-terraform-provider-abstract-test
+      - run: make pkg-inf-terraform-provider-abstract-test

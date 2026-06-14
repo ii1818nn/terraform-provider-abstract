@@ -6,7 +6,7 @@ on:
       - pkg-inf-terraform-provider-abstract/v*
 
 jobs:
-  release:
+  pkg-inf-terraform-provider-abstract-release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,8 +20,7 @@ jobs:
           go-version: stable
           cache-dependency-path: packages/pkg-inf-terraform-provider-abstract/go.sum
 
-      - name: import gpg key
-        run: echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+      - run: echo "$GPG_PRIVATE_KEY" | gpg --batch --import
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
 
