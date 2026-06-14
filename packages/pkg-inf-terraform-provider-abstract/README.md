@@ -1,1 +1,1 @@
-# pkg-inf-terraform-abstract-provider
+# pkg-inf-terraform-provider-abstract
