@@ -1,10 +1,12 @@
 .PHONY: \
+	package-init \
 	package-lint \
 	package-lint-fix \
 	package-build \
 	package-dev \
 	package-test \
 	package-check \
+	package-go-init \
 	package-go-lint \
 	package-go-lint-fix \
 	package-go-build \
@@ -13,6 +15,8 @@
 	package-go-check \
 
 package-dev: package-go-dev
+
+package-init: package-go-init
 
 package-lint: package-go-lint
 
@@ -25,6 +29,9 @@ package-test: package-go-test
 package-check: package-go-check
 
 package-go-dev:
+
+package-go-init:
+	go mod download
 
 package-go-lint:
 	golangci-lint run ./...

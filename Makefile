@@ -1,16 +1,19 @@
 .PHONY: \
+	package-init \
 	package-lint \
 	package-lint-fix \
 	package-build \
 	package-dev \
 	package-test \
 	package-check \
+	package-go-init \
 	package-go-lint \
 	package-go-lint-fix \
 	package-go-build \
 	package-go-dev \
 	package-go-test \
 	package-go-check \
+	pkg-inf-terraform-provider-abstract-init \
 	pkg-inf-terraform-provider-abstract-lint \
 	pkg-inf-terraform-provider-abstract-lint-fix \
 	pkg-inf-terraform-provider-abstract-build \
@@ -19,6 +22,8 @@
 	pkg-inf-terraform-provider-abstract-check \
 
 package-dev: package-go-dev
+
+package-init: package-go-init
 
 package-lint: package-go-lint
 
@@ -32,6 +37,9 @@ package-check: package-go-check
 
 package-go-dev:
 	$(MAKE) -C packages/pkg-inf-terraform-provider-abstract package-go-dev
+
+package-go-init:
+	$(MAKE) -C packages/pkg-inf-terraform-provider-abstract package-go-init
 
 package-go-lint:
 	$(MAKE) -C packages/pkg-inf-terraform-provider-abstract package-go-lint
@@ -50,6 +58,9 @@ package-go-check:
 
 pkg-inf-terraform-provider-abstract-dev:
 	$(MAKE) -C packages/pkg-inf-terraform-provider-abstract package-dev
+
+pkg-inf-terraform-provider-abstract-init:
+	$(MAKE) -C packages/pkg-inf-terraform-provider-abstract package-init
 
 pkg-inf-terraform-provider-abstract-lint:
 	$(MAKE) -C packages/pkg-inf-terraform-provider-abstract package-lint
