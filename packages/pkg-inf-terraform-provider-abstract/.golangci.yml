@@ -10,4 +10,4 @@ formatters:
   settings:
     goimports:
       local-prefixes:
-        - github.com/ii1818nn/pkg-inf-terraform-provider-abstract
+        - github.com/ii1818nn/terraform-provider-abstract
